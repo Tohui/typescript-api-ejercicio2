@@ -59,7 +59,7 @@ const pruebaUpdate = async(id:number, name:string, description:string) => {
 
 //========================================================//
 //pruebaFindById()
-pruebaFindAll()
+//pruebaFindAll()
 //pruebaCreate('valdimir','y amimirs')
 //pruebaDelete(11)
 //pruebaUpdate(10,"Josifin","larala")
