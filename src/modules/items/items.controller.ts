@@ -26,15 +26,16 @@ const sendResponse = (res: Response, status: number, message?: string, data?: an
     }
 };
 
-const handleRequest = (fn:(req:Request, res:Response) => Promise<any>) => {
-    async (req:Request,res:Response) => {
+const handleRequest = (fn: (req: Request, res: Response) => Promise<any>) => {
+    return async (req: Request, res: Response) => {  // Añadido el `return` explícito
         try {
-            await fn(req,res)  
-        } catch (error:unknown) {
+            await fn(req, res);
+        } catch (error: unknown) {
             sendResponse(res, 500, error instanceof Error ? error.message : 'Error desconocido');
         }
-    }
-}
+    };
+};
+
 
 export class ItemsController {
     private service = new itemsService()
