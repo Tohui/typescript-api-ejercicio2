@@ -13,5 +13,4 @@ export class itemsService {
     delete = async (id:number) => {return await this.items_repository.delete(id)}
 
     update = async (id:number, name:string, description:string) => {return await this.items_repository.update(id,name,description)}
-
 }

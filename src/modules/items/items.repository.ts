@@ -1,6 +1,6 @@
 import {RowDataPacket} from 'mysql2'
 import {connection} from "../../databases/database"
-import { Pool } from 'mysql2/typings/mysql/lib/Pool'
+
 
 export class itemsRepository {
 
